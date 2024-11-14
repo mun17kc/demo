@@ -1,0 +1,96 @@
+.header {
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.logo {
+    width: 120px;
+    height: auto;
+    position: absolute;
+    left: 50px;
+}
+.header_nav_list {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+}
+.header_nav_list li a {
+    color: var(--color-black);
+    text-decoration: none;
+    font-size: 17px;
+    &:hover {
+        color: var(--color-green);
+        border-bottom: 2px solid;
+    }
+}
+.header_search {
+    width: 200px;
+    height: 40px;
+    position: absolute;
+    right: 300px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: white;
+}
+.header_search_input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0 15px;
+    font-size: 16px;
+    border-radius: 20px 0 0 20px;
+}
+.header_search_icon {
+    font-size: 20px;
+    padding: 0 15px;
+    color: #333;
+    cursor: pointer;
+}
+.header_right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    right: 50px;
+}
+
+.header_cart {
+    margin-right: 20px; /* Khoảng cách giữa giỏ hàng và các nút */
+}
+
+.header_cart_icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.btn_header {
+    display: flex;
+}
+
+.btn_header_login,
+.btn_header_register {
+    margin-left: 12px; /* Tạo khoảng cách giữa nút Đăng Nhập và Đăng Ký */
+}
+
+.btn_login,
+.btn_register {
+    color: white;
+    background-color: var(--color-green);
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    &:hover {
+        cursor: pointer;
+        background-color: var(--color-green-hover);
+    }
+}
