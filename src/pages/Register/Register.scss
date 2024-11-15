@@ -1,5 +1,5 @@
 /* Tổng thể container */
-.login-container {
+.register_container {
     display: flex;
     width: auto;
     height: 400px;
@@ -29,7 +29,7 @@
 }
 
 /* Phần chứa form đăng nhập bên phải */
-.login-section {
+.register-section {
     flex: 1;
     display: flex;
     align-items: center;
@@ -39,7 +39,7 @@
     height: 375px;
 }
 
-.login-form {
+.register-form {
     width: 100%;
     max-width: 300px;
     text-align: center;
@@ -47,11 +47,11 @@
     right: 15px;
 }
 
-.login-title {
+.register-title {
     color: var(--color-green);
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .form-group {
@@ -78,8 +78,7 @@
     }
 }
 
-.login-button,
-.close-button {
+.register-button {
     margin-top: 10px;
     width: 100%;
     padding: 10px;
@@ -92,7 +91,4 @@
     &:hover {
         background-color: var(--color-green-hover);
     }
-}
-.close-button {
-    margin-top: 15px;
 }

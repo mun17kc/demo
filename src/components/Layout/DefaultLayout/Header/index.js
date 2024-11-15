@@ -2,7 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { IoSearchSharp } from 'react-icons/io5';
 import { LiaShoppingCartSolid } from 'react-icons/lia';
+
 import './Header.scss';
+
 function Header() {
     return (
         <header className="header">
@@ -41,10 +43,14 @@ function Header() {
                 </div>
                 <div className="btn_header">
                     <div className="btn_header_login">
-                        <button className="btn_login">Đăng Nhập</button>
+                        <Link to="/Login">
+                            <button className="btn_login">Đăng Nhập</button>
+                        </Link>
                     </div>
                     <div className="btn_header_register">
-                        <button className="btn_register">Đăng Ký</button>
+                        <Link to="/Register">
+                            <button className="btn_register">Đăng Ký</button>
+                        </Link>
                     </div>
                 </div>
             </div>

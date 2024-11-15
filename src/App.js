@@ -5,6 +5,8 @@ import Product from '~/pages/Product';
 import Introduce from '~/pages/Introduce';
 import Contact from '~/pages/Contact';
 import Login from './pages/Login';
+import Register from './pages/Register';
+
 function App() {
     return (
         <Router>
@@ -15,6 +17,7 @@ function App() {
                     <Route path="/introduce" element={<Introduce />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/login" element={<Login />} />
+                    <Route path="/register" element={<Register />} />
                 </Routes>
             </div>
         </Router>
