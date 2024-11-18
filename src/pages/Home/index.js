@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '~/components/Layout/DefaultLayout/Header';
 import Footer from '~/components/Layout/DefaultLayout/Footer';
@@ -20,6 +21,11 @@ const products = [
     { name: 'Dưa lưới', image: '/images/anh_dua_luoi.webp', price: '100,000 đ' },
 ];
 function Home() {
+    const [cartItems, setCartItems] = useState([]);
+
+    const addToCart = (product) => {
+        setCartItems([...cartItems, product]);
+    };
     return (
         <div className="wrapper">
             <Header />
@@ -36,14 +42,14 @@ function Home() {
                 <h2>SẢN PHẨM CỦA CHÚNG TÔI</h2>
                 <div className="product">
                     {products.map((product, index) => (
-                        <ProductCard key={index} product={product} />
+                        <ProductCard key={index} product={product} addToCart={addToCart} />
                     ))}
                 </div>
                 <div className="slider_2"></div>
                 <h2>BEST SELLER</h2>
                 <div className="product">
                     {products.slice(0, 5).map((product, index) => (
-                        <ProductCard key={index} product={product} />
+                        <ProductCard key={index} product={product} addToCart={addToCart} />
                     ))}
                 </div>
                 <div className="slider_3">
@@ -54,7 +60,7 @@ function Home() {
                 </div>
                 <h2>SẢN PHẨM MỚI</h2>
                 {products.map((product, index) => (
-                    <ProductCard key={index} product={product} />
+                    <ProductCard key={index} product={product} addToCart={addToCart} />
                 ))}
             </div>
             <Footer />

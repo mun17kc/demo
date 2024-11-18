@@ -12,16 +12,24 @@ function Header() {
             <nav className="header_nav">
                 <ul className="header_nav_list">
                     <li>
-                        <Link to="/">Trang Chủ</Link>
+                        <Link to="/" exact activeClassName="active">
+                            Trang Chủ
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/product">Sản Phẩm</Link>
+                        <Link to="/product" activeClassName="active">
+                            Sản Phẩm
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/introduce">Giới Thiệu</Link>
+                        <Link to="/introduce" activeClassName="active">
+                            Giới Thiệu
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/contact">Liên Hệ</Link>
+                        <Link to="/contact" activeClassName="active">
+                            Liên Hệ
+                        </Link>
                     </li>
                 </ul>
             </nav>
@@ -36,9 +44,11 @@ function Header() {
             <div className="header_right">
                 <div className="header_cart">
                     <div className="header_cart_icon">
-                        <i className="LiaShoppingCartSolid">
-                            <LiaShoppingCartSolid />
-                        </i>
+                        <Link to="/cartpage">
+                            <i className="LiaShoppingCartSolid">
+                                <LiaShoppingCartSolid />
+                            </i>
+                        </Link>
                     </div>
                 </div>
                 <div className="btn_header">

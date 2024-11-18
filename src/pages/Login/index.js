@@ -15,7 +15,6 @@ function Login() {
                 <div className="login-section">
                     <form className="login-form">
                         <h2 className="login-title">ĐĂNG NHẬP</h2>
-
                         <div className="form-group">
                             <label htmlFor="username">Tên đăng nhập</label>
                             <input type="text" id="username" placeholder="username" required />

@@ -15,9 +15,9 @@ function Footer() {
                             tiêu chuẩn chất lượng.
                         </p>
                         <ul>
-                            <li>Địa chỉ: Số 3 Đường Số 21 La Huân - Điện Thọ - Điện Bàn - Quảng Nam</li>
+                            <li>Địa chỉ: 566 Núi Thành - Hòa Cường Nam - Hải Châu - TP Đà Nẵng</li>
                             <li>SĐT: 0335661795</li>
-                            <li>Gmail: Wandave@gmail.com</li>
+                            <li>Gmail: hau_2251220056@dau.edu.vn</li>
                         </ul>
                     </div>
                 </div>
