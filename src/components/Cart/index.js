@@ -14,7 +14,7 @@ const Cart = ({ cartItems }) => {
                             <img src={item.image} alt={item.name} className="cart_image" />
                             <div className="cart_details">
                                 <p className="cart_name">{item.name}</p>
-                                <p className="cart_price">{item.price} VND</p>
+                                <p className="cart_price">{item.price}</p>
                             </div>
                         </li>
                     ))}

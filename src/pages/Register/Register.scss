@@ -2,7 +2,7 @@
 .register_container {
     display: flex;
     width: auto;
-    height: 400px;
+    height: 415px;
     position: relative;
     margin: 10%;
     padding: 10px;
@@ -45,8 +45,11 @@
     text-align: center;
     position: absolute;
     right: 15px;
+    height: 395px;
 }
-
+.ogoregister {
+    margin-top: 5px;
+}
 .register-title {
     color: var(--color-green);
     font-size: 24px;

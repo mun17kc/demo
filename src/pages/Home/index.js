@@ -4,22 +4,11 @@ import { Link } from 'react-router-dom';
 import Header from '~/components/Layout/DefaultLayout/Header';
 import Footer from '~/components/Layout/DefaultLayout/Footer';
 import ProductCard from '~/components/ProductCard/index';
+import products from '~/components/data/products';
 import img1 from '../../asset/slider/slider2.webp';
 import img2 from '../../asset/slider/slider3.webp';
 import './Home.scss';
 
-const products = [
-    { name: 'Bắp mỹ', image: '/images/anh_bap.webp', price: '35,000 đ' },
-    { name: 'Bí đỏ', image: '/images/anh_bi_do.webp', price: '55,000 đ' },
-    { name: 'Bí xanh', image: '/images/anh_bi_xanh.webp', price: '40,000 đ' },
-    { name: 'Bưởi da xanh', image: '/images/anh_buoi_da_xanh.webp', price: '120,000 đ' },
-    { name: 'Cà chua', image: '/images/anh_ca-chua.webp', price: '25,000 đ' },
-    { name: 'Cà rốt', image: '/images/anh_ca_rot.webp', price: '32,000 đ' },
-    { name: 'Cà tím', image: '/images/anh_ca_tim.webp', price: '20,000 đ' },
-    { name: 'Đậu bắp', image: '/images/anh_dau_bap.webp', price: '22,000 đ' },
-    { name: 'Dâu tây', image: '/images/anh_dau-tay.webp', price: '90,000 đ' },
-    { name: 'Dưa lưới', image: '/images/anh_dua_luoi.webp', price: '100,000 đ' },
-];
 function Home() {
     const [cartItems, setCartItems] = useState([]);
 
@@ -41,7 +30,7 @@ function Home() {
                 </div>
                 <h2>SẢN PHẨM CỦA CHÚNG TÔI</h2>
                 <div className="product">
-                    {products.map((product, index) => (
+                    {products.slice(0, 10).map((product, index) => (
                         <ProductCard key={index} product={product} addToCart={addToCart} />
                     ))}
                 </div>
@@ -59,7 +48,7 @@ function Home() {
                     </Link>
                 </div>
                 <h2>SẢN PHẨM MỚI</h2>
-                {products.map((product, index) => (
+                {products.slice(0, 10).map((product, index) => (
                     <ProductCard key={index} product={product} addToCart={addToCart} />
                 ))}
             </div>
