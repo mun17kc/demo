@@ -72,10 +72,12 @@
 }
 
 .header_cart_icon {
-    font-size: 24px;
+    font-size: 28px;
     cursor: pointer;
 }
-
+.LiaShoppingCartSolid {
+    color: var(--color-black);
+}
 .btn_header {
     display: flex;
 }

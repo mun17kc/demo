@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import Header from '~/components/Layout/DefaultLayout/Header';
-import Footer from '~/components/Layout/DefaultLayout/Footer';
+
 import { useNavigate } from 'react-router-dom'; // Thay useHistory bằng useNavigate
 import axios from 'axios';
 import './Register.scss';
@@ -41,7 +40,6 @@ function Register() {
 
     return (
         <div className="register_wrapper">
-            <Header />
             <div className="register_container">
                 <div className="image-section">
                     <img src="/images/anh_DHKT.jpg" alt="University" className="background-image" />
@@ -49,7 +47,7 @@ function Register() {
                 <div className="register-section">
                     <form className="register-form" onSubmit={handleRegister}>
                         <img src="/images/logoDAU.png" alt="logo" className="logoregister" />
-                        <h2 className="register-title">ĐĂNG KÝ TÀI KHOẢN</h2>
+                        <h2 className="register-title">ĐĂNG KÝ</h2>
                         {message && <p className="message">{message}</p>} {/* Hiển thị thông báo */}
                         <div className="form-group">
                             <label htmlFor="username">Tên đăng nhập</label>
@@ -90,7 +88,6 @@ function Register() {
                     </form>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 }

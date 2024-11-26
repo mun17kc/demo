@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import Header from '~/components/Layout/DefaultLayout/Header';
-import Footer from '~/components/Layout/DefaultLayout/Footer';
+
 import { useNavigate } from 'react-router-dom'; // Thay useHistory bằng useNavigate
 import axios from 'axios';
 import './Login.scss';
@@ -35,7 +34,6 @@ function Login() {
 
     return (
         <div className="login_wrapper">
-            <Header />
             <div className="login-container">
                 <div className="image-section">
                     <img src="/images/anh_DHKT.jpg" alt="University" className="background-image" />
@@ -73,7 +71,6 @@ function Login() {
                     </form>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 }

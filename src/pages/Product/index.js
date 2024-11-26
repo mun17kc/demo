@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import Header from '~/components/Layout/DefaultLayout/Header';
-import Footer from '~/components/Layout/DefaultLayout/Footer';
+
 import Sidebar from '~/components/Layout/DefaultLayout/Sidebar';
 import img3 from '../../asset/slider/slider7.webp';
 import ProductCard from '~/components/ProductCard/index';
@@ -22,7 +21,6 @@ function Product() {
 
     return (
         <div className="main">
-            <Header />
             <div className="product_content">
                 <Sidebar />
                 <div className="product_content_slide">
@@ -48,10 +46,15 @@ function Product() {
                         >
                             2
                         </button>
+                        <button
+                            className={`btn_product ${currentPage === 3 ? 'active' : ''}`}
+                            onClick={() => handlePageChange(3)}
+                        >
+                            3
+                        </button>
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 }

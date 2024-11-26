@@ -1,6 +1,5 @@
 import React from 'react';
-import Header from '~/components/Layout/DefaultLayout/Header';
-import Footer from '~/components/Layout/DefaultLayout/Footer';
+
 import { RiMapPin2Fill } from 'react-icons/ri';
 import { FaPhoneFlip } from 'react-icons/fa6';
 import { MdEmail } from 'react-icons/md';
@@ -8,7 +7,6 @@ import './Contact.scss';
 function Contact() {
     return (
         <div className="contact_wrapper">
-            <Header />
             <div className="contact_container">
                 <div className="contact_gg_map"></div>
                 <div className="contact_container_info">
@@ -64,7 +62,6 @@ function Contact() {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 }

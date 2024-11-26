@@ -1,13 +1,11 @@
 import React from 'react';
-import Header from '~/components/Layout/DefaultLayout/Header';
-import Footer from '~/components/Layout/DefaultLayout/Footer';
+
 import img from '../../asset/slider/slider8.jpg';
 import img1 from '../../asset/slider/slider9.jpg';
 import './Introduce.scss';
 function Introduce() {
     return (
         <div className="intro_wrapper">
-            <Header />
             <div className="intro_container">
                 <div className="intro_left">
                     <img src={img1} alt="banner" className="left_intro_img"></img>
@@ -35,7 +33,6 @@ function Introduce() {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 }

@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import Header from '~/components/Layout/DefaultLayout/Header';
-import Footer from '~/components/Layout/DefaultLayout/Footer';
 import products from '~/components/data/products';
+import { CartContext } from '~/components/Cartcontext'; // Nhập CartContext
+
 import './ProductDetail.scss';
+
 function ProductDetail() {
     const { id } = useParams();
     const product = products.find((p) => p.id === parseInt(id));
 
     const [quantity, setQuantity] = useState(1);
+    const { addToCart } = useContext(CartContext); // Lấy hàm addToCart từ context
 
     if (!product) {
         return <div>Không tìm thấy sản phẩm!</div>;
@@ -27,9 +29,12 @@ function ProductDetail() {
         setQuantity(value);
     };
 
+    const handleAddToCart = () => {
+        addToCart({ ...product, quantity }); // Thêm sản phẩm vào giỏ hàng
+    };
+
     return (
         <div className="product-detail">
-            <Header />
             <div className="product-detail-content">
                 <img src={product.image} alt={product.name} className="product-image" />
                 <div className="product-info">
@@ -55,10 +60,11 @@ function ProductDetail() {
                         />
                         <input type="button" value="+" className="btn-quantity-increase" onClick={handleIncrease} />
                     </div>
-                    <button className="btn-add-cart">Thêm vào giỏ hàng</button>
+                    <button className="btn-add-cart" onClick={handleAddToCart}>
+                        Thêm vào giỏ hàng
+                    </button>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 }

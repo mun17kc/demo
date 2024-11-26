@@ -143,6 +143,54 @@ const products = [
         description:
             'Nấm ngọc cẩu mọc ở đâu?Trong điều kiện tự nhiên, nó phát triển ở các vùng thảo nguyên và rừng-thảo nguyên của Nga và Ukraine, cũng như ở Bắc Caucasus, Nhật Bản, Trung Quốc. Nấm mọc trên tàn tích của cây rụng lá, và được tìm thấy trên cây du. Họ thích những nơi vắng vẻ khó tiếp cận: rừng phong và sồi chết, bụi rậm rậm rạp, chặt hạ, chắn gió.Có quả từ tháng 5 đến tháng 9,',
     },
+    {
+        id: 19,
+        name: 'Trứng gà',
+        image: '/images/anh_trung_ga.jpg',
+        price: '60,000 đ',
+        description:
+            'Trứng gà là nguồn thực phẩm quen thuộc hàng ngày với tất cả mọi người. Thành phần dinh dưỡng trong trứng gà không chỉ cung cấp cho cơ thể nguồn dưỡng chất tuyệt vời mà còn có công dụng hỗ trợ kiểm soát một số bệnh lý.',
+    },
+    {
+        id: 20,
+        name: 'Cá thu',
+        image: '/images/ca-thu.webp',
+        price: '110,000 đ',
+        description:
+            'Cá thu là loại cá có hương vị thịt đặc trưng không lẫn vào đâu được, hơn nữa lại mang hàm lượng dinh dưỡng cao. Chính vì thế nhiều bà nội trợ luôn lựa chọn nguyên liệu này để trổ tài biến tấu đa dạng với những món ngon vô cùng hấp dẫn trong bữa cơm hằng ngày.',
+    },
+    {
+        id: 21,
+        name: 'Dưa hấu',
+        image: '/images/dua_hau.webp',
+        price: '80,000 đ',
+        description:
+            'Dưa hấu có tên khoa học là Citrullus lanatus, là một loại thực vật thuộc họ bầu bí, vỏ cứng, chứa nhiều nước, có nguồn gốc từ miền nam Châu Phi. Dưa hấu được được nhiều người ưa chuộng bởi tính ngọt mát và nhiều nước, đồng thời còn giúp cung cấp nhiều vitamin và các nguyên tố vi lượng cho cơ thể.',
+    },
+    {
+        id: 22,
+        name: 'Lựu hồng',
+        image: '/images/luu_hong.webp',
+        price: '75,000 đ',
+        description:
+            'Lựu được xem là một trong những loại trái cây tốt nhất cho sức khỏe. Trong quả lựu chứa một loạt các hợp chất từ thực vật có lợi mà nhiều loại thực phẩm khác không thể so sánh được. Các nghiên cứu đã cho thấy rằng chúng có thể có nhiều lợi ích cho cơ thể và làm giảm nguy cơ mắc nhiều bệnh khác nhau. Dưới đây là 12 lợi ích sức khỏe dựa trên bằng chứng của quả lựu.',
+    },
+    {
+        id: 23,
+        name: 'Thanh long',
+        image: '/images/thanh_long.webp',
+        price: '40,000 đ',
+        description:
+            'Thanh long là một loại trái cây nhiệt đới giàu giá trị dinh dưỡng. Nhiều bằng chứng cho thấy loại quả này có thể mang đến nhiều lợi ích sức khỏe đáng quý, chẳng hạn như bổ sung chất chống oxy hóa, ngăn ngừa ung thư và tăng cường sức khỏe hệ miễn dịch cho cơ thể.',
+    },
+    {
+        id: 24,
+        name: 'Vú sữa',
+        image: '/images/vu_sua.webp',
+        price: '80,000 đ',
+        description:
+            'Quả của cây vú sữa là một quả mọng hình trứng hoặc hình cầu, đường kính 5–10cm, màu xanh lục chuyển sang màu vàng lục hoặc xanh tía hoặc tím khi chín. Quả vú sữa có vỏ dày, bề mặt mịn, hơi bóng, một số giống có màu tím xỉn, một số giống có màu xanh nhạt. Cùi quả vú sữa có màu trắng, mềm. Hạt được chứa trong các tế bào hạt cao su, và mỗi hạt được bao bọc bởi một lớp cùi sền sệt.',
+    },
 ];
 
 export default products;
