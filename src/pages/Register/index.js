@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-
 import { useNavigate } from 'react-router-dom'; // Thay useHistory bằng useNavigate
-import axios from 'axios';
+import { registerUser } from '~/api/api'; // Nhập hàm từ api.js
 import './Register.scss';
 
 function Register() {
     const [username, setUsername] = useState('');
+    const [email, setEmail] = useState(''); // Thêm trường email
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [message, setMessage] = useState('');
@@ -19,18 +19,14 @@ function Register() {
         }
 
         try {
-            const response = await axios.post('http://localhost/myapi/api.php', {
-                action: 'register',
-                username,
-                password,
-            });
+            const result = await registerUser(username, email, password); // Gọi hàm registerUser  từ api.js
 
-            if (response.data.success) {
+            if (result.success) {
                 setMessage('Đăng ký thành công!');
                 // Chuyển hướng đến trang đăng nhập sau khi đăng ký thành công
-                navigate('/Login'); // Sử dụng navigate thay vì history.push
+                navigate('/Login'); // Sử dụng navigate để chuyển hướng
             } else {
-                setMessage('Tên đăng nhập đã tồn tại.');
+                setMessage(result.message || 'Tên đăng nhập đã tồn tại.'); // Hiển thị thông báo từ server
             }
         } catch (error) {
             console.error('Đã xảy ra lỗi:', error);
@@ -57,6 +53,17 @@ function Register() {
                                 placeholder="username"
                                 value={username}
                                 onChange={(e) => setUsername(e.target.value)}
+                                required
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="email">Email</label> {/* Thêm trường email */}
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="email@example.com"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
                                 required
                             />
                         </div>

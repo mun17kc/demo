@@ -1,30 +1,28 @@
-import React, { useState } from 'react';
-
-import { useNavigate } from 'react-router-dom'; // Thay useHistory bằng useNavigate
-import axios from 'axios';
+// src/pages/Login/index.js
+import React, { useState, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { loginUser } from '~/api/api'; // Nhập hàm từ api.js
+import { AuthContext } from '~/components/AuthContext'; // Nhập AuthContext
 import './Login.scss';
 
 function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState('');
-    const navigate = useNavigate(); // Sử dụng useNavigate để điều hướng
+    const navigate = useNavigate();
+    const { login } = useContext(AuthContext); // Lấy hàm login từ AuthContext
 
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost/myapi/api.php', {
-                action: 'login',
-                username,
-                password,
-            });
+            const result = await loginUser(username, password); // Gọi hàm loginUser  từ api.js
 
-            if (response.data.success) {
+            if (result.success) {
                 setMessage('Đăng nhập thành công!');
-                // Chuyển hướng đến trang chính sau khi đăng nhập thành công
-                navigate('/'); // Sử dụng navigate thay vì history.push
+                login(result.user); // Cập nhật thông tin người dùng vào AuthContext
+                navigate('/'); // Chuyển hướng đến trang chính sau khi đăng nhập thành công
             } else {
-                setMessage('Tên đăng nhập hoặc mật khẩu không đúng.');
+                setMessage(result.message || 'Tên đăng nhập hoặc mật khẩu không đúng.'); // Hiển thị thông báo từ server
             }
         } catch (error) {
             console.error('Đã xảy ra lỗi:', error);

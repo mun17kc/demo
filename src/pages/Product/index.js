@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import Sidebar from '~/components/Layout/DefaultLayout/Sidebar';
 import img3 from '../../asset/slider/slider7.webp';
 import ProductCard from '~/components/ProductCard/index';
