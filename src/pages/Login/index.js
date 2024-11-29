@@ -21,6 +21,7 @@ function Login() {
             if (result.success) {
                 setMessage('Đăng nhập thành công!');
                 login(result.user); // Cập nhật thông tin người dùng vào AuthContext
+                localStorage.setItem('user', JSON.stringify(result.user));
                 navigate('/'); // Chuyển hướng đến trang chính sau khi đăng nhập thành công
             } else {
                 setMessage(result.message || 'Tên đăng nhập hoặc mật khẩu không đúng.'); // Hiển thị thông báo từ server
