@@ -68,7 +68,8 @@
 }
 
 .header_cart {
-    margin-right: 20px; /* Khoảng cách giữa giỏ hàng và các nút */
+    right: 260px;
+    position: absolute; /* Khoảng cách giữa giỏ hàng và các nút */
 }
 
 .header_cart_icon {
@@ -93,6 +94,7 @@
     color: var(--color-black);
 }
 .btn_header {
+    align-items: center;
     display: flex;
 }
 
@@ -111,5 +113,38 @@
     &:hover {
         cursor: pointer;
         background-color: var(--color-green-hover);
+    }
+}
+
+.btn_logout {
+    color: var(--color-white);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-green);
+    &:hover {
+        cursor: pointer;
+        background-color: var(--color-green-hover);
+    }
+}
+
+.icon-user {
+    display: flex;
+    margin-right: 45px;
+    font-size: 30px;
+    position: relative;
+    cursor: pointer;
+    .username {
+        position: absolute;
+        display: none;
+        bottom: -46px;
+        right: -52px;
+        background-color: var(--color-black);
+        padding: 10px;
+        border-radius: 5px;
+        color: var(--color-white);
+    }
+    &:hover .username {
+        display: block; /* Hiện tên người dùng khi hover */
     }
 }

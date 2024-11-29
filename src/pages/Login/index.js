@@ -3,6 +3,7 @@ import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { loginUser } from '~/api/api'; // Nhập hàm từ api.js
 import { AuthContext } from '~/components/AuthContext'; // Nhập AuthContext
+import { Link } from 'react-router-dom';
 import './Login.scss';
 
 function Login() {
@@ -66,6 +67,15 @@ function Login() {
                         <button type="submit" className="login-button">
                             Đăng nhập
                         </button>
+                        <div className="register-p">
+                            <p className="header-p">bạn chưa có tài khoản. </p>
+                            <p className="footer-p">
+                                đăng kí tài khoản:{' '}
+                                <Link to="/register">
+                                    <span>tại đây</span>
+                                </Link>{' '}
+                            </p>
+                        </div>
                     </form>
                 </div>
             </div>

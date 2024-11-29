@@ -1,8 +1,8 @@
-// src/components/Layout/DefaultLayout/Header/index.js
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { IoSearchSharp } from 'react-icons/io5';
 import { LiaShoppingCartSolid } from 'react-icons/lia';
+import { LuUserCircle2 } from 'react-icons/lu';
 import { CartContext } from '~/components/Cartcontext';
 import { AuthContext } from '~/components/AuthContext'; // Nhập AuthContext
 import './Header.scss';
@@ -45,23 +45,28 @@ function Header() {
                     <IoSearchSharp />
                 </div>
             </div>
-            <div className="header_right">
-                <div className="header_cart">
-                    <div className="header_cart_icon">
-                        <Link to="/cartpage">
-                            <LiaShoppingCartSolid />
-                            {totalQuantity > 0 && <span className="cart-count">{totalQuantity}</span>}
-                        </Link>
-                    </div>
+            <div className="header_cart">
+                <div className="header_cart_icon">
+                    <Link to="/cartpage">
+                        <LiaShoppingCartSolid />
+                        {totalQuantity > 0 && <span className="cart-count">{totalQuantity}</span>}
+                    </Link>
                 </div>
+            </div>
+            <div className="header_right">
                 <div className="btn_header">
                     {user ? (
                         <>
-                            <span className="username">{user.username}</span> {/* Hiển thị tên người dùng */}
+                            <div className="icon-user">
+                                <i className="">
+                                    {' '}
+                                    <LuUserCircle2 />
+                                </i>
+                                <span className="username">{user.username}</span> {/* Hiển thị tên người dùng */}
+                            </div>
                             <button className="btn_logout" onClick={logout}>
                                 Đăng Xuất
-                            </button>{' '}
-                            {/* Nút đăng xuất */}
+                            </button>
                         </>
                     ) : (
                         <>

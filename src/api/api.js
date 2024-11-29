@@ -31,17 +31,31 @@ export const loginUser = async (username, password) => {
         const response = await axios.post(
             API_URL,
             {
-                action: 'login', // Gửi action là 'login'
+                action: 'login',
                 username,
                 password,
             },
             {
                 headers: {
-                    'Content-Type': 'application/json', // Đặt header là application/json
+                    'Content-Type': 'application/json',
                 },
             },
         );
-        return response.data; // Trả về dữ liệu từ server
+
+        console.log(response.data); // Kiểm tra dữ liệu trả về từ API
+
+        // Kiểm tra phản hồi từ server
+        if (response.data.success) {
+            return {
+                success: true,
+                user: response.data.user, // Đảm bảo rằng bạn lấy thông tin người dùng từ phản hồi
+            };
+        } else {
+            return {
+                success: false,
+                message: response.data.message, // Thông báo lỗi từ server
+            };
+        }
     } catch (error) {
         console.error('Error logging in user:', error);
         throw error; // Ném lỗi ra ngoài để xử lý ở nơi gọi
