@@ -83,7 +83,7 @@ function Register() {
                             <input
                                 type="password"
                                 id="confirm-password"
-                                placeholder="Nhập lại mật khẩu"
+                                placeholder="Nhập lại password"
                                 value={confirmPassword}
                                 onChange={(e) => setConfirmPassword(e.target.value)}
                                 required

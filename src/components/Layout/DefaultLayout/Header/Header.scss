@@ -135,10 +135,11 @@
     position: relative;
     cursor: pointer;
     .username {
+        font-size: 16px;
         position: absolute;
         display: none;
-        bottom: -46px;
-        right: -52px;
+        bottom: -45px;
+
         background-color: var(--color-black);
         padding: 10px;
         border-radius: 5px;
