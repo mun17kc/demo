@@ -9,6 +9,7 @@ import Contact from './pages/Contact';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Cartpage from './pages/Cartpage';
+import SearchPage from './pages/SearchPage';
 import { CartProvider } from './components/Cartcontext';
 import { AuthProvider } from './components/AuthContext'; // Nhập AuthProvider
 import ProductDetail from './pages/ProductDetail';
@@ -33,6 +34,7 @@ function App() {
                             <Route path="/login" element={<Login />} />
                             <Route path="/register" element={<Register />} />
                             <Route path="/cartpage" element={<Cartpage />} />
+                            <Route path="/search" element={<SearchPage />} />
                         </Routes>
                     </div>
                     <Footer />

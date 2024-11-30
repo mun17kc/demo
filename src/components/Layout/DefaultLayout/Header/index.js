@@ -1,5 +1,6 @@
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+
 import { IoSearchSharp } from 'react-icons/io5';
 import { LiaShoppingCartSolid } from 'react-icons/lia';
 import { LuUserCircle2 } from 'react-icons/lu';
@@ -11,6 +12,17 @@ function Header() {
     const { getTotalQuantity } = useContext(CartContext);
     const { user, logout } = useContext(AuthContext); // Lấy thông tin người dùng và hàm logout từ AuthContext
     const totalQuantity = getTotalQuantity();
+
+    const [searchQuery, setSearchQuery] = useState('');
+    const navigate = useNavigate();
+
+    const handleSearch = (e) => {
+        e.preventDefault();
+        if (searchQuery.trim()) {
+            navigate(`/search?query=${encodeURIComponent(searchQuery)}`); // Sử dụng navigate để điều hướng
+            setSearchQuery(''); // Reset input tìm kiếm
+        }
+    };
 
     return (
         <header className="header">
@@ -39,12 +51,18 @@ function Header() {
                     </li>
                 </ul>
             </nav>
-            <div className="header_search">
-                <input type="text" className="header_search_input" placeholder="tìm kiếm" />
-                <div className="header_search_icon">
+            <form onSubmit={handleSearch} className="header_search">
+                <input
+                    type="text"
+                    className="header_search_input"
+                    placeholder="tìm kiếm"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                />
+                <button type="submit" className="header_search_icon">
                     <IoSearchSharp />
-                </div>
-            </div>
+                </button>
+            </form>
             <div className="header_cart">
                 <div className="header_cart_icon">
                     <Link to="/cartpage">
