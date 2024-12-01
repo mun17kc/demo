@@ -1,8 +1,9 @@
+// src/pages/ProductDetail/index.js
 import React, { useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import products from '~/components/data/products';
 import { CartContext } from '~/components/Cartcontext'; // Nhập CartContext
-
+import Modal from '~/components/Modal'; // Import Modal
 import './ProductDetail.scss';
 
 function ProductDetail() {
@@ -11,6 +12,7 @@ function ProductDetail() {
 
     const [quantity, setQuantity] = useState(1);
     const { addToCart } = useContext(CartContext); // Lấy hàm addToCart từ context
+    const [isModalOpen, setIsModalOpen] = useState(false); // State cho modal
 
     if (!product) {
         return <div>Không tìm thấy sản phẩm!</div>;
@@ -23,7 +25,7 @@ function ProductDetail() {
     const handleDecrease = () => {
         setQuantity((prevQuantity) => (prevQuantity > 1 ? prevQuantity - 1 : 1));
     };
-
+    // xử lý thay đổi giá trị
     const handleChange = (e) => {
         const value = Math.max(1, Number(e.target.value) || 1);
         setQuantity(value);
@@ -31,6 +33,12 @@ function ProductDetail() {
 
     const handleAddToCart = () => {
         addToCart({ ...product, quantity }); // Thêm sản phẩm vào giỏ hàng
+        setIsModalOpen(true); // Mở modal khi thêm vào giỏ hàng
+
+        // Đặt thời gian đóng modal sau 1 giây
+        setTimeout(() => {
+            setIsModalOpen(false); // Đóng modal sau 1 giây
+        }, 500);
     };
 
     return (
@@ -65,6 +73,9 @@ function ProductDetail() {
                     </button>
                 </div>
             </div>
+            {isModalOpen && (
+                <Modal message="Sản phẩm đã được thêm vào giỏ hàng!" onClose={() => setIsModalOpen(false)} />
+            )}
         </div>
     );
 }

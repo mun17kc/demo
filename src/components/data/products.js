@@ -7,6 +7,7 @@ const products = [
         description:
             'Bắp Mỹ Hạt được trồng và phát triển rộng ở khắp nơi trên thế giớiBắp Mỹ còn có các tên gọi khác là ngô ngọt hay bắp ngọt. Ở Châu Mỹ thì đây là cây lương thực được gieo trồng nhiều nhất và đã có các giống bắp lai ghép cho năng suất cực kỳ cao. Khoảng những năm 1990, loại bắp này đã du nhập vào nước ta rồi sau đó phát triển rộng rãi đến ngày hôm nay.',
     },
+
     {
         id: 2,
         name: 'Bí đỏ',
@@ -28,6 +29,7 @@ const products = [
         name: 'Bưởi da xanh',
         image: '/images/anh_buoi_da_xanh.webp',
         price: '120,000 đ',
+        category: 'fruit',
         description:
             'Bưởi da xanh là một giống bưởi có nguồn gốc đầu tiên ở xã Thanh Tân, huyện Mỏ Cày Bắc, tỉnh Bến Tre. Trái bưởi da xanh có dạng hình cầu, nặng trung bình từ 1,2 – 2,5 kg/trái; vỏ có màu xanh đến xanh hơi vàng khi chín, dễ lột và khá mỏng (14–18 mm); tép bưởi màu hồng đỏ, bó chặt và dễ tách khỏi vách múi; vị ngọt không chua (độ brix: 9,5–12%); mùi thơm; không hạt đến khá nhiều hạt (có thể có đến 30 hạt/trái); tỷ lệ thịt/trái >55%',
     },
@@ -68,6 +70,8 @@ const products = [
         name: 'Dâu tây',
         image: '/images/anh_dau-tay.webp',
         price: '90,000 đ',
+        category: 'fruit',
+        size: '1 kg',
         description:
             'Dâu tây (Fragaria ananassa) có nguồn gốc từ châu Âu vào thế kỷ 18, có màu đỏ tươi, vị ngon ngọt và thơm. Nó chính là giống lai của hai loại dâu tây tự nhiên đến từ Bắc Mỹ và Chile. Được trồng đầu tiên ở Rome cổ đại, dâu tây hiện là loại quả mọng phổ biến nhất trên thế giới. Ở Pháp, chúng thậm chí được coi là một loại thuốc kích thích tình dục. Chúng được ví như những viên đá quý màu đỏ này rất tốt cho trái tim của bạn theo những cách khác nhau.',
     },
@@ -76,6 +80,7 @@ const products = [
         name: 'Dưa lưới',
         image: '/images/anh_dua_luoi.webp',
         price: '100,000 đ',
+        category: 'fruit',
         description:
             'Dưa lưới ruột xanh thuộc họ bầu bí, tên khoa học là Cucumis melo. Dưa lưới ruột xanh có dáng tròn hoặc dài tùy từng giống, mỗi quả nặng từ 1.5 - 3.5kg, lớp vỏ bên ngoài có màu xanh đan xen với các đường vân nổi màu trắng như có một lớp lưới bọc bên ngoài. Phần ruột bên trong của dưa có màu xanh nhạt, vị ngọt thanh và giòn.',
     },
@@ -92,6 +97,7 @@ const products = [
         name: 'Nho tím',
         image: '/images/anh_nho_tim.webp',
         price: '140,000 đ',
+        category: 'fruit',
         description:
             'Nho là một loại trái cây giàu dinh dưỡng gồm các chất chống oxy hóa, vitamin và khoáng chất. Chính vì thế mà quả nho đem lại nhiều lợi ích cho sức khỏe con người. Cùng khám phá các thành phần dinh dưỡng có trong quả nhỏ và 13 lợi ích sức khỏe của việc ăn nho mà có thể bạn chưa biết.',
     },
@@ -100,6 +106,7 @@ const products = [
         name: 'Ổi xanh',
         image: '/images/anh_oi_xanh.webp',
         price: '50,000 đ',
+        category: 'fruit',
         description:
             'Ổi không chỉ là trái cây sạch ăn vặt khoái khẩu của nhiều người mà nó còn có tác dụng rất lớn đối với sức khỏe con người. Nếu như ổi dầm là món ăn tuyệt vời với các bạn trẻ thì gỏi ổi, ổi dồn thịt lại là một món ăn trứ danh của một số vùng miền. Để biết các công thức chế biến ổi ngon nhất,',
     },
@@ -164,6 +171,7 @@ const products = [
         name: 'Dưa hấu',
         image: '/images/dua_hau.webp',
         price: '80,000 đ',
+        category: 'fruit',
         description:
             'Dưa hấu có tên khoa học là Citrullus lanatus, là một loại thực vật thuộc họ bầu bí, vỏ cứng, chứa nhiều nước, có nguồn gốc từ miền nam Châu Phi. Dưa hấu được được nhiều người ưa chuộng bởi tính ngọt mát và nhiều nước, đồng thời còn giúp cung cấp nhiều vitamin và các nguyên tố vi lượng cho cơ thể.',
     },
@@ -172,6 +180,7 @@ const products = [
         name: 'Lựu hồng',
         image: '/images/luu_hong.webp',
         price: '75,000 đ',
+        category: 'fruit',
         description:
             'Lựu được xem là một trong những loại trái cây tốt nhất cho sức khỏe. Trong quả lựu chứa một loạt các hợp chất từ thực vật có lợi mà nhiều loại thực phẩm khác không thể so sánh được. Các nghiên cứu đã cho thấy rằng chúng có thể có nhiều lợi ích cho cơ thể và làm giảm nguy cơ mắc nhiều bệnh khác nhau. Dưới đây là 12 lợi ích sức khỏe dựa trên bằng chứng của quả lựu.',
     },
@@ -180,6 +189,7 @@ const products = [
         name: 'Thanh long',
         image: '/images/thanh_long.webp',
         price: '40,000 đ',
+        category: 'fruit',
         description:
             'Thanh long là một loại trái cây nhiệt đới giàu giá trị dinh dưỡng. Nhiều bằng chứng cho thấy loại quả này có thể mang đến nhiều lợi ích sức khỏe đáng quý, chẳng hạn như bổ sung chất chống oxy hóa, ngăn ngừa ung thư và tăng cường sức khỏe hệ miễn dịch cho cơ thể.',
     },
@@ -188,6 +198,7 @@ const products = [
         name: 'Vú sữa',
         image: '/images/vu_sua.webp',
         price: '80,000 đ',
+        category: 'fruit',
         description:
             'Quả của cây vú sữa là một quả mọng hình trứng hoặc hình cầu, đường kính 5–10cm, màu xanh lục chuyển sang màu vàng lục hoặc xanh tía hoặc tím khi chín. Quả vú sữa có vỏ dày, bề mặt mịn, hơi bóng, một số giống có màu tím xỉn, một số giống có màu xanh nhạt. Cùi quả vú sữa có màu trắng, mềm. Hạt được chứa trong các tế bào hạt cao su, và mỗi hạt được bao bọc bởi một lớp cùi sền sệt.',
     },
