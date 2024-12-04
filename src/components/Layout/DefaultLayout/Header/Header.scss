@@ -98,6 +98,9 @@
 .btn_header {
     align-items: center;
     display: flex;
+    a {
+        color: var(--color-black);
+    }
 }
 
 .btn_header_login,

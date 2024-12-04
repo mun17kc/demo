@@ -75,13 +75,15 @@ function Header() {
                 <div className="btn_header">
                     {user ? (
                         <>
-                            <div className="icon-user">
-                                <i className="">
-                                    {' '}
-                                    <LuUserCircle2 />
-                                </i>
-                                <span className="username">{user.username}</span> {/* Hiển thị tên người dùng */}
-                            </div>
+                            <Link to="/history-payment">
+                                <div className="icon-user">
+                                    <i className="">
+                                        {' '}
+                                        <LuUserCircle2 />
+                                    </i>
+                                    <span className="username">{user.username}</span> {/* Hiển thị tên người dùng */}
+                                </div>
+                            </Link>
                             <button className="btn_logout" onClick={logout}>
                                 Đăng Xuất
                             </button>

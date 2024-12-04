@@ -1,16 +1,30 @@
-// src/pages/SearchPage/index.js
-import React, { useContext } from 'react';
+import React, { useEffect, useContext, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import products from '~/components/data/products'; // Import danh sách sản phẩm
 import { Link } from 'react-router-dom';
 import { CartContext } from '~/components/Cartcontext';
 import './SearchPage.scss';
+import axios from 'axios';
 
 function SearchPage() {
     const query = new URLSearchParams(useLocation().search).get('query'); // Lấy query từ URL
-    const filteredProducts = products.filter((product) => product.name.toLowerCase().includes(query.toLowerCase()));
-
+    const [filteredProducts, setFilteredProducts] = useState([]);
     const { addToCart } = useContext(CartContext);
+
+    useEffect(() => {
+        const fetchProducts = async () => {
+            try {
+                const response = await axios.get(`http://localhost/myapi/api.php?action=search&keyword=${query}`);
+                console.log('Dữ liệu trả về từ API:', response.data);
+                setFilteredProducts(response.data);
+            } catch (error) {
+                console.error('Error fetching products:', error);
+            }
+        };
+
+        if (query) {
+            fetchProducts();
+        }
+    }, [query]);
 
     return (
         <div className="products-search">

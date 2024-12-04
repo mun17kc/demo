@@ -60,7 +60,7 @@ function Cart() {
                     <div className="cart-header-right">
                         <h2 className="cart-header-right-info">Thông tin đơn hàng</h2>
                         <p className="cart-header-right-sum">
-                            Tổng tiền: <span className="value">{totalAmount.toLocaleString()}</span>{' '}
+                            Tổng tiền: <span className="value">{totalAmount.toLocaleString()} vnđ</span>{' '}
                         </p>
                     </div>
                     <div className="cart-center">
@@ -70,7 +70,10 @@ function Cart() {
                         <textarea className="note-cart" placeholder="ghi chú"></textarea>
                     </div>
                     <div className="cart-footer">
-                        <button className="cart-footer-btn">Thanh toán ngay</button>
+                        <Link to="/payment">
+                            <button className="cart-footer-btn">Thanh toán ngay</button>
+                        </Link>
+
                         <Link to="/product" className="link-product">
                             tiếp tục mua hàng
                         </Link>

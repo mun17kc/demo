@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router } from 'react-router-dom'; // Import Router
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import GlobalStyle from './components/GlobalStyle';
@@ -8,7 +9,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
         <GlobalStyle>
-            <App />
+            <Router>
+                {' '}
+                {/* Bọc App trong Router */}
+                <App />
+            </Router>
         </GlobalStyle>
     </React.StrictMode>,
 );
