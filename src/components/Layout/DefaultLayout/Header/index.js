@@ -26,7 +26,7 @@ function Header() {
 
     return (
         <header className="header">
-            <img src="/images/logo.webp" alt="logo" className="logo" />
+            <img src="/images/logo.png" alt="logo" className="logo" />
             <nav className="header_nav">
                 <ul className="header_nav_list">
                     <li>

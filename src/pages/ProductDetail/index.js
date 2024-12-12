@@ -51,7 +51,7 @@ function ProductDetail() {
                     <p className="product-description">{product.description}</p>
                     <div className="product-mass">
                         <h5>
-                            Khối lượng: <span>1kg</span>
+                            Khối lượng: <span>trungbinh</span>
                         </h5>
                     </div>
                     <h5>Số lượng</h5>

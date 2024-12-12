@@ -15,9 +15,12 @@
     height: 300px;
 }
 .content_title {
-    margin: 25px 0 0 20px;
+    margin: 25px auto 0; /* Đặt auto để căn giữa */
+    text-align: center; /* Căn chữ vào giữa */
     font-size: 18px;
+    display: block; /* Đảm bảo nó là block để dễ căn chỉnh */
 }
+
 .sanpham {
     text-align: left;
     width: 113%;

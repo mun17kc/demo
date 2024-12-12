@@ -11,13 +11,12 @@ function Footer() {
                     </div>
                     <div className="footer_info">
                         <p>
-                            Thực phẩm Organic Wandave chuyên cung cấp các thực phẩm tươi sạch, giá cả phải chằng. Đạt
-                            tiêu chuẩn chất lượng.
+                            Cây cảnh nhà MUN chuyên về cây cảnh đủ loại 
                         </p>
                         <ul>
                             <li>Địa chỉ: 566 Núi Thành - Hòa Cường Nam - Hải Châu - TP Đà Nẵng</li>
-                            <li>SĐT: 0335661795</li>
-                            <li>Gmail: hau_2251220056@dau.edu.vn</li>
+                            <li>SĐT: 033066959</li>
+                            <li>Gmail:nguyenthikimcam1@gmail.com</li>
                         </ul>
                     </div>
                 </div>
@@ -62,8 +61,8 @@ function Footer() {
                 </div>
             </footer>
             <div className="footer_logo">
-                <img src="/images/logo.webp" alt="logo" className="logo logo_footer" />
-                <p>© Copyright 2024 By Wandave. Powere by Haravan</p>
+               
+                <p>MUA HÀNG CÙNG CHÚNG TÔI ĐỂ CÓ ĐƯỢC TRẢI NGHIỆM TỐT NHẤT</p>
             </div>
         </div>
     );

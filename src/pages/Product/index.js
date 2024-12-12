@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Sidebar from '~/components/Layout/DefaultLayout/Sidebar';
-import img3 from '../../asset/slider/slider7.webp';
+import img3 from '../../asset/slider/th4.jpg';
 import ProductCard from '~/components/ProductCard/index';
 import products from '~/components/data/products';
 import './Product.scss';

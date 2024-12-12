@@ -34,6 +34,7 @@ function Contact() {
                             </div>
                         </form>
                     </div>
+                    
                     <div className="contact_right">
                         <h2 className="contact_h1">THÔNG TIN LIÊN HỆ</h2>
                         <div className="contact_info">
@@ -49,14 +50,14 @@ function Contact() {
                                     <FaPhoneFlip />
                                 </i>
                                 <label>Số điện thoại</label>
-                                <p>033.566.1795</p>
+                                <p>033066959</p>
                             </ul>
                             <ul className="contact_info_list">
                                 <i className="contact_street">
                                     <MdEmail />
                                 </i>
                                 <label>Email</label>
-                                <p>hau_2251220056@dau.edu.vn</p>
+                                <p>nguyenthikimcam1@gmail.com</p>
                             </ul>
                         </div>
                     </div>

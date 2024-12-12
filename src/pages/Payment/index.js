@@ -6,9 +6,9 @@ import './Payment.scss';
 function Payment() {
     const { cartItems } = useContext(CartContext);
     const [totalAmount, setTotalAmount] = useState(0);
-    const [recipientName, setRecipientName] = useState(''); // Đổi tên biến cho rõ ràng
-    const [phoneNumber, setPhoneNumber] = useState(''); // Đổi tên biến cho rõ ràng
-    const [address, setAddress] = useState(''); // Đổi tên biến cho rõ ràng
+    const [recipientName, setRecipientName] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState('');
+    const [address, setAddress] = useState('');
     const [cvv, setCvv] = useState('');
     const navigate = useNavigate();
 
@@ -43,7 +43,7 @@ function Payment() {
         };
 
         try {
-            const response = await fetch('http://localhost/myapi/api.php', {
+            const response = await fetch('http://localhost:8080/myapi/api.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -56,15 +56,23 @@ function Payment() {
 
             if (response.ok) {
                 const data = await response.json();
-                const paymentTime = new Date().toLocaleString();
+                const paymentTime = new Date().toLocaleString(undefined, {
+                    hour12: false, // Sử dụng định dạng 24 giờ
+                    year: 'numeric',
+                    month: '2-digit',
+                    day: '2-digit',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit',
+                }).replace(',', ''); // Xóa dấu phẩy
 
                 // Lưu thông tin thanh toán vào localStorage
                 const savedPayments = JSON.parse(localStorage.getItem('payments')) || [];
                 savedPayments.push({
                     orderId: data.message,
                     recipientName: recipientName,
-                    phoneNumber: phoneNumber, // Lưu số điện thoại
-                    address: address, // Lưu địa chỉ
+                    phoneNumber: phoneNumber,
+                    address: address,
                     totalAmount: formatCurrency(totalAmount),
                     paymentTime: paymentTime,
                     status: 'pending', // Trạng thái ban đầu là 'pending'
@@ -74,11 +82,11 @@ function Payment() {
                 // Chuyển hướng đến trang xác nhận đơn hàng
                 navigate('/order-confirmation', { state: { orderId: data.message, paymentTime, status: 'pending' } });
             } else {
-                alert('Error saving payment');
+                alert('Lỗi khi lưu thông tin thanh toán');
             }
         } catch (error) {
-            console.error('Error:', error);
-            alert('Error saving payment');
+            console.error('Lỗi:', error);
+            alert('Lỗi khi lưu thông tin thanh toán');
         }
     };
 
@@ -116,9 +124,15 @@ function Payment() {
                         required
                     />
                 </div>
-                <div className=" form-group">
+                <div className="form-group">
                     <label htmlFor="cvv">Phương thức thanh toán</label>
-                    <input id="cvv" type="text" value={cvv} onChange={(e) => setCvv(e.target.value)} required />
+                    <input
+                        id="cvv"
+                        type="text"
+                        value={cvv}
+                        onChange={(e) => setCvv(e.target.value)}
+                        required
+                    />
                 </div>
                 <div className="form-group">
                     <button type="submit">Thanh toán</button>

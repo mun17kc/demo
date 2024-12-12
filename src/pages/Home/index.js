@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 import ProductCard from '~/components/ProductCard/index';
 import products from '~/components/data/products';
-import img1 from '../../asset/slider/slider2.webp';
-import img2 from '../../asset/slider/slider3.webp';
+import img1 from '../../asset/slider/th.jpg';
+import img2 from '../../asset/slider/th3.jpg';
 import './Home.scss';
 
 function Home() {
@@ -35,7 +35,7 @@ function Home() {
                     ))}
                 </div>
                 <div className="slider_3">
-                    <p className="title">Giảm giá cuối mùa lên tới 30%</p>
+                    
                     <Link to="/product" className="button_sub">
                         Xem ngay
                     </Link>

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import img from '../../asset/slider/slider8.jpg';
-import img1 from '../../asset/slider/slider9.jpg';
+
+import img1 from '../../asset/slider/banner3.jpg';
 import './Introduce.scss';
 function Introduce() {
     return (
@@ -11,24 +11,17 @@ function Introduce() {
                     <img src={img1} alt="banner" className="left_intro_img"></img>
                 </div>
                 <div className="intro_right">
-                    <img src={img} alt="banner" className="right_intro_img"></img>
+                    
                     <h2 className="intro_tilte">Giới thiệu</h2>
                     <div className="lorem_intro">
                         <p className="p_intro">
-                            WandaVe tự hào là thương hiệu thực phẩm chất lượng cao, luôn cam kết mang đến cho bạn những
-                            sản phẩm tươi ngon, an toàn và dinh dưỡng. Chúng tôi hiểu rằng mỗi bữa ăn không chỉ đơn
-                            thuần là nguồn cung cấp năng lượng mà còn là cách để bạn chăm sóc sức khỏe và yêu thương bản
-                            thân cùng gia đình.
+                        Shop Cây Cảnh Nhà Mun tự hào là điểm đến lý tưởng cho những ai yêu thích thiên nhiên và muốn mang không gian xanh vào ngôi nhà của mình. Chúng tôi cam kết cung cấp những loại cây cảnh chất lượng, tươi tốt, giúp bạn tạo nên một môi trường sống trong lành và đầy sức sống.
                         </p>
                         <p className="p_intro">
-                            Tại WandaVe, bạn sẽ tìm thấy đa dạng các loại thực phẩm từ rau củ sạch, thực phẩm hữu cơ,
-                            đến các món ăn chế biến sẵn tiện lợi, được chọn lọc kỹ càng từ những nguồn cung ứng đáng tin
-                            cậy. Chúng tôi luôn nỗ lực nâng cao chất lượng sản phẩm và dịch vụ, giúp bạn tận hưởng trải
-                            nghiệm mua sắm dễ dàng, tiện lợi và nhanh chóng.
+                        Tại Nhà Mun, bạn sẽ khám phá một bộ sưu tập đa dạng các loại cây cảnh, từ những loại cây nhỏ xinh để bàn làm việc cho đến các cây lớn, phù hợp với không gian sống rộng rãi. Tất cả sản phẩm đều được chọn lọc kỹ càng từ những nguồn cung ứng uy tín, đảm bảo an toàn và dễ chăm sóc.
                         </p>
                         <p className="p_intro">
-                            Hãy để WandaVe đồng hành cùng bạn trong hành trình chăm sóc sức khỏe toàn diện và mang đến
-                            bữa ăn ngon lành mỗi ngày!
+                        Chúng tôi không chỉ cung cấp cây cảnh, mà còn chia sẻ kiến thức hữu ích về cách chăm sóc và bảo quản cây, giúp bạn trở thành một người yêu cây cảnh thực thụ. Đội ngũ nhân viên nhiệt tình và giàu kinh nghiệm của chúng tôi luôn sẵn sàng hỗ trợ bạn trong hành trình tìm kiếm và chăm sóc những người bạn xanh.
                         </p>
                     </div>
                 </div>

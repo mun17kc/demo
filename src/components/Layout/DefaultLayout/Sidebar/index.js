@@ -42,7 +42,7 @@ function Sidebar({ onFilterChange, setCurrentPage }) {
                             checked={checkedItems.fruit}
                             onChange={handleCheckboxChange}
                         />
-                        <label htmlFor="fruit">Trái Cây </label>
+                        <label htmlFor="fruit">cây để bàn </label>
                     </li>
                     <li>
                         <input
@@ -51,30 +51,14 @@ function Sidebar({ onFilterChange, setCurrentPage }) {
                             checked={checkedItems.vegetables}
                             onChange={handleCheckboxChange}
                         />
-                        <label htmlFor="vegetables">Rau Củ </label>
+                        <label htmlFor="vegetables">cây trồng </label>
                     </li>
                     <li>
                         <input type="checkbox" id="meat" checked={checkedItems.meat} onChange={handleCheckboxChange} />
-                        <label htmlFor="meat">Thịt </label>
+                        <label htmlFor="meat">đồ phụ kiện </label>
                     </li>
-                    <li>
-                        <input
-                            type="checkbox"
-                            id="dryFood"
-                            checked={checkedItems.dryFood}
-                            onChange={handleCheckboxChange}
-                        />
-                        <label htmlFor="dry-food">Thực Phẩm Khô </label>
-                    </li>
-                    <li>
-                        <input
-                            type="checkbox"
-                            id="dessert"
-                            checked={checkedItems.dessert}
-                            onChange={handleCheckboxChange}
-                        />
-                        <label htmlFor="dessert">Bánh Ngọt </label>
-                    </li>
+                  
+                  
                 </ul>
             </div>
 
@@ -88,7 +72,7 @@ function Sidebar({ onFilterChange, setCurrentPage }) {
                             checked={checkedItems.farmer}
                             onChange={handleCheckboxChange}
                         />
-                        <label htmlFor="farmer">Farmer</label>
+                        <label htmlFor="farmer">munC</label>
                     </li>
                     <li>
                         <input
@@ -162,7 +146,7 @@ function Sidebar({ onFilterChange, setCurrentPage }) {
                             checked={checkedItems.size1}
                             onChange={handleCheckboxChange}
                         />
-                        <label htmlFor="size1">1 kg</label>
+                        <label htmlFor="size1">nhỏ</label>
                     </li>
                     <li>
                         <input
@@ -171,7 +155,7 @@ function Sidebar({ onFilterChange, setCurrentPage }) {
                             checked={checkedItems.size15}
                             onChange={handleCheckboxChange}
                         />
-                        <label htmlFor="size2">1,5 kg</label>
+                        <label htmlFor="size2">trung bình</label>
                     </li>
                     <li>
                         <input
@@ -180,7 +164,7 @@ function Sidebar({ onFilterChange, setCurrentPage }) {
                             checked={checkedItems.size2}
                             onChange={handleCheckboxChange}
                         />
-                        <label htmlFor="size3">2 kg</label>
+                        <label htmlFor="size3">lớn</label>
                     </li>
                 </ul>
             </div>

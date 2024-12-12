@@ -1,7 +1,7 @@
 // src/api.js
 import axios from 'axios';
 
-const API_URL = 'http://localhost/myapi/api.php'; // Địa chỉ đến file api.php
+const API_URL = 'http://localhost:8080/myapi/api.php'; // Địa chỉ đến file api.php
 
 export const registerUser = async (username, email, password) => {
     try {
